@@ -42,9 +42,8 @@ class NoteCreatorScreen: AbstractCreatorScreen() {
         super.menuHandler.showMessage(SHOW_NOTE_CONTENT)
         menuHandler.showMessageList(note.content)
 
-        var userInput = ""
         super.menuHandler.showMessage(QUIT_NOTE_CONTENT)
-        userInput = menuHandler.getUserStr()
+        menuHandler.getUserStr()
     }
 
     private companion object{
@@ -53,6 +52,5 @@ class NoteCreatorScreen: AbstractCreatorScreen() {
         const val SHOW_NOTE_CONTENT = "\nСодержимое заметки:"
         const val QUIT_NOTE_CONTENT = "\nВведите любой символ, чтобы вернуться к списку заметок"
         const val ERROR_EMPTY_NOTE_CONTENT = "\nЗаметка не создана: не задано содержимое заметки"
-        const val ERROR_INCORRECT_INPUT = "\nНекорректный ввод."
     }
 }

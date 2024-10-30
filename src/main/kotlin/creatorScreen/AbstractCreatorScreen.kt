@@ -9,7 +9,7 @@ abstract class AbstractCreatorScreen {
     abstract val creatorNameMassage: CreatorNameMessage
 
     fun <T:Item> createItem(items: MutableList<T>): Item?{
-        var userInput: String = ""
+        var userInput: String
         while(true) {
             menuHandler.showMessage(creatorNameMassage.enterItemName)
             userInput = menuHandler.getUserStr()
